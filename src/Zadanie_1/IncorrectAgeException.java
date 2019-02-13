@@ -5,8 +5,7 @@ public class IncorrectAgeException extends Exception {
         message = "Wiek musi być większy od 0";
     }
 
-
     public IncorrectAgeException() {
-
+        System.out.println("Wiek musi być większy od 0");
     }
 }
