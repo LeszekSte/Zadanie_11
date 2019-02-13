@@ -6,7 +6,7 @@ public class Preson {
     private String pesel;
     private int age;
 
-    public Preson(String firstName, String lastName, int age, String pesel) {
+    public Preson(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
         if (firstName==null || lastName==null || firstName.length()<3 || lastName.length()<3 )
             throw new NameUndefinedException();
         if (age <1)

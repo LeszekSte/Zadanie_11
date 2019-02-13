@@ -6,21 +6,25 @@ import java.util.SortedMap;
 
 
 public class TestClass {
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws NameUndefinedException,IncorrectAgeException {
 
         Scanner scanner = new Scanner(System.in);
+        String firstName = null;
+        String lName = null;
+        String pesel = null;
+        int age  = 0;
+
         System.out.println("Podaj imię");
+        firstName = scanner.nextLine();
 
 
-
-        String firstName = scanner.nextLine();
         System.out.println("Podaj Nazwisko");
         String lastName = scanner.nextLine();
         System.out.println("Podaj wiek");
-        int age = scanner.nextInt();
+        age = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Podaj pesel");
-        String pesel = scanner.nextLine();
+        pesel = scanner.nextLine();
 
         Preson preson = new Preson(firstName,lastName,age,pesel );
 
