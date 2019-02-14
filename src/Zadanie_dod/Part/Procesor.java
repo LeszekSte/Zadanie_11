@@ -16,10 +16,11 @@ public class Procesor extends PatrtMotherBoard {
 
     @Override
     public void increase(int jump) {
-        setTempetature(getTempetature() + (jump/100)*STEP_PROC);
-        if (getTempetature()>= getMaxTemp()){
+        double temp = getTempetature() + (jump/100)*STEP_PROC;
+        if (temp>= getMaxTemp()){
             throw new TempratureAlarmException();
         }
+        setTempetature(temp);
         this.timing+=jump;
     }
 
@@ -27,7 +28,7 @@ public class Procesor extends PatrtMotherBoard {
     public String toString() {
         return  "Procesor{" +
                 "Temp " + getTempetature()+
-                "timing=" + timing +
+                ", timing=" + timing +
                 '}';
     }
 }

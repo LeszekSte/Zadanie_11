@@ -31,9 +31,7 @@ public class TestClass {
 
         System.out.println("Podaj pesel");
         pesel = scanner.nextLine();
-
         Preson preson = new Preson(firstName, lastName, age, pesel);
-
         System.out.println(preson.toString());
     }
 }

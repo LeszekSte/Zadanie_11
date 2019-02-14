@@ -36,11 +36,25 @@ public class Ram extends PatrtMotherBoard {
     @Override
     public void increase(int jump) {
         setTempetature(getTempetature()+jump/100*STEP_RAM);
+
         if (getTempetature()>= getMaxTemp()){
             throw new TempratureAlarmException();
         }
         this.clockSpeed+=jump;
     }
+
+//    public void increase(int jump) {
+//       try{
+//
+//           setTempetature(getTempetature()+jump/100*STEP_RAM);
+//           this.clockSpeed+=jump;
+//
+//       }catch (TempratureAlarmException ex){
+//            System.out.println(ex);
+//       }
+//
+//    }
+
 
     @Override
     public String toString() {
