@@ -1,4 +1,4 @@
-package Zadanie_dod.Part;
+package Zadanie_dod.part;
 
 import Zadanie_dod.PartOfComputer;
 

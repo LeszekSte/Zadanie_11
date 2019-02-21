@@ -7,10 +7,10 @@ public class Preson {
     private int age;
 
     public Preson(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
-        if (firstName==null || lastName==null || firstName.length()<3 || lastName.length()<3 )
+        if (firstName == null || lastName == null || firstName.length() < 3 || lastName.length() < 3)
             throw new NameUndefinedException();
-        if (age <1)
-            throw  new IncorrectAgeException();
+        if (age < 1)
+            throw new IncorrectAgeException();
         this.firstName = firstName;
         this.lastName = lastName;
         this.pesel = pesel;
@@ -21,7 +21,9 @@ public class Preson {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) throws NameUndefinedException {
+        if (firstName == null || firstName.length() < 3)
+            throw new NameUndefinedException();
         this.firstName = firstName;
     }
 
@@ -29,7 +31,9 @@ public class Preson {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName) throws NameUndefinedException {
+        if (lastName == null || lastName.length() < 3)
+            throw new NameUndefinedException();
         this.lastName = lastName;
     }
 
@@ -45,7 +49,9 @@ public class Preson {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws IncorrectAgeException {
+        if (age < 1)
+            throw new IncorrectAgeException();
         this.age = age;
     }
 

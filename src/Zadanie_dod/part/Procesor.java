@@ -1,9 +1,7 @@
-package Zadanie_dod.Part;
+package Zadanie_dod.part;
 
 import Zadanie_dod.PatrtMotherBoard;
 import Zadanie_dod.TempratureAlarmException;
-
-import java.awt.*;
 
 public class Procesor extends PatrtMotherBoard {
     private int timing;
@@ -14,15 +12,16 @@ public class Procesor extends PatrtMotherBoard {
         this.timing = timing;
     }
 
-    @Override
-    public void increase(int jump) {
-        double temp = getTempetature() + (jump/100)*STEP_PROC;
-        if (temp>= getMaxTemp()){
+   @Override
+    public void increase (int jump) {
+        double temp = getTempetature() + (jump / 100) * STEP_PROC;
+        if (temp >= getMaxTemp()) {
             throw new TempratureAlarmException();
         }
         setTempetature(temp);
         this.timing+=jump;
     }
+
 
     @Override
     public String toString() {

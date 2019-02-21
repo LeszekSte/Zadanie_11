@@ -1,6 +1,6 @@
 package Zadanie_dod;
 
-public abstract class PartOfComputer {
+public abstract class PartOfComputer extends Compter {
     private String nameModel;
     private String producer;
     private String serialNumber;

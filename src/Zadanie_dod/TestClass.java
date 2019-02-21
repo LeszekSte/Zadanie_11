@@ -1,10 +1,8 @@
 package Zadanie_dod;
 
-import Zadanie_dod.Part.HardDisc;
-import Zadanie_dod.Part.Procesor;
-import Zadanie_dod.Part.Ram;
-
-import java.util.Scanner;
+import Zadanie_dod.part.HardDisc;
+import Zadanie_dod.part.Procesor;
+import Zadanie_dod.part.Ram;
 
 
 public class TestClass {

@@ -8,14 +8,14 @@ public class TestClass {
 
         Scanner scanner = new Scanner(System.in);
         String firstName = null;
-        String lName = null;
+        String lastName = null;
         String pesel = null;
         int age = 0;
 
         System.out.println("Podaj imię");
         firstName = scanner.nextLine();
         System.out.println("Podaj Nazwisko");
-        String lastName = scanner.nextLine();
+        lastName = scanner.nextLine();
         boolean ok = false;
         do {
             try {

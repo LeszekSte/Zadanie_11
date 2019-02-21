@@ -1,4 +1,4 @@
-package Zadanie_dod.Part;
+package Zadanie_dod.part;
 
 import Zadanie_dod.PatrtMotherBoard;
 import Zadanie_dod.TempratureAlarmException;
@@ -7,9 +7,6 @@ public class Ram extends PatrtMotherBoard {
     private int memory;
     private int clockSpeed;
     static private final int STEP_RAM = 10;
-
-
-
 
     public Ram(String nameModel, String producer, String serialNumber, double tempetature, int maxTemp, int memory, int clockSpeed) {
         super(nameModel, producer, serialNumber, tempetature, maxTemp);
